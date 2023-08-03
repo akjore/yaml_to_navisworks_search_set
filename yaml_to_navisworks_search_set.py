@@ -40,7 +40,7 @@ def _add_selectionset(key, val):
             else:
                 flags = '90'  # or
 
-            if val[idx].find('*'):
+            if '*' in val[idx]:
                 test = 'wildcard'
             else:
                 test = 'contains'
