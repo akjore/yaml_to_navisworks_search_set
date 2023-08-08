@@ -1,0 +1,31 @@
+[build-system]
+requires = [ "setuptools>=41", "wheel", "setuptools-git-versioning<2", ]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+dev_template = "{tag}.post{ccount}"
+
+[tool.black] 
+line-length = 120
+
+[tool.ruff]
+select = ["A", "B", "D", "E", "F", "I", "N", "Q", "ANN", "ERA", "PTH", "RET", "SIM", "TRY"]
+# select = ["ALL"]
+ignore = ["D203", "D213"]
+line-length = 120
+
+[project]
+name = "yaml_to_navisworks_search_set"
+dynamic = ["version"]
+authors = [
+  { name="Arne Kristian Jore", email="akjore@outlook.com" },
+]
+description = "Simple converter from .yaml to .xml file with navisworks search sets"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
