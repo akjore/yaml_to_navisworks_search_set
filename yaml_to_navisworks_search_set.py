@@ -75,7 +75,7 @@ def _build_xml_file(set_dict: dict) -> ElementTree.Element:
     if set_dict:
         for key, val in set_dict.items():
             selectionset = _add_selectionset(key, val)
-            if selectionset:
+            if selectionset is not None:
                 viewfolder.append(selectionset)
 
     return exchange
